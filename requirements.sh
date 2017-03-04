@@ -1,4 +1,4 @@
 apt-get update
-apt-get install -y clang
+apt-get install -y --no-install-recommends clang
 
-mkdir -p $HOME/.R && printf "CXX=clang++\nCC=clang\n" > $HOME/.R/Makevars
+mkdir -p $HOME/.R && printf "CXX=clang++ -ftemplate-depth-256\nCC=clang\n" > $HOME/.R/Makevars
